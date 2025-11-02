@@ -1,50 +1,85 @@
-# Welcome to your Expo app 👋
+# 📱 Proyecto de E-commerce Móvil
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Proyecto creado por Zapata Julian** para la materia **Ingeniería de Software 2**, correspondiente al segundo año de la carrera de **Desarrollo de Software**.
 
-## Get started
+Este proyecto es una aplicación móvil desarrollada con **React Native** y **Expo**. Permite gestionar productos de una tienda: crear, editar, eliminar y visualizar detalles.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🧭 Cómo utilizar el proyecto
 
-2. Start the app
+### 🏠 Pantalla principal (Listado de productos)
 
-   ```bash
-   npx expo start
-   ```
+Dentro de esta pantalla se verá un listado de productos, los cuales fueron creados con la API dada por los docentes.  
+El usuario puede desplazarse verticalmente por la pantalla para ver todos los productos disponibles.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### ➕ Botón "Crear Nuevo Producto" (Pantalla Crear Producto)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Dentro de la pantalla principal, en la parte superior, se encuentra el botón **Crear Nuevo Producto**.  
+Al oprimirlo, el usuario será direccionado a la pantalla de creación de nuevo producto.
 
-## Get a fresh project
+En esta pantalla se pueden completar los siguientes campos:
 
-When you're ready, run:
+- *Título del producto*  
+- *Precio del producto*  
+- *Descripción del producto*  
+- *Categoría del producto*  
+- *URL de imagen del producto*
 
-```bash
-npm run reset-project
-```
+Una vez que el usuario rellene los campos y oprima el botón **Guardar**, será direccionado nuevamente a la pantalla de **Listado de Productos**.  
+> *Tanto la validación de campos vacíos como la creación del producto son limitaciones del proyecto.*
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### 🔍 Detalle de producto (Pantalla Detalle Producto)
 
-To learn more about developing your project with Expo, look at the following resources:
+Desde la pantalla principal, si el usuario selecciona un producto, será llevado a la pantalla de detalle.  
+En esta pantalla se visualizarán:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- *Título del producto*  
+- *Precio del producto*  
+- *Descripción del producto*  
+- *Categoría del producto*  
+- *Imagen del producto*
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### ✏️ Editar Producto (Pantalla Editar Producto)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+En la pantalla de detalle del producto, se encuentran dos botones: **Editar** y **Eliminar**.  
+Al oprimir el botón **Editar**, el usuario será llevado a una pantalla donde podrá modificar el producto seleccionado.
+
+Campos editables:
+
+- *Título del producto*  
+- *Precio del producto*  
+- *Descripción del producto*  
+- *Categoría del producto*  
+- *URL de imagen del producto*
+
+Una vez que el usuario oprima el botón **Guardar**, será direccionado nuevamente a la pantalla de **Detalle del Producto**.  
+> *Tanto la validación de campos vacíos como la edición del producto son limitaciones del proyecto.*
+
+---
+
+### 🗑️ Eliminar Producto (Pantalla Eliminar Producto)
+
+En la pantalla de detalle del producto, también se encuentra el botón **Eliminar**.  
+Al oprimirlo, el usuario será llevado a una pantalla de confirmación.
+
+Contenido de esta pantalla:
+
+- Mensaje: *¿Está seguro que desea eliminar este producto?*  
+- Botón **Confirmar**  
+- Botón **Cancelar**
+
+Acciones:
+
+- Si el usuario oprime **Confirmar**, será llevado a la pantalla de **Listado de Productos**  
+  > *La eliminación del producto es una limitación del proyecto.*
+
+- Si el usuario oprime **Cancelar**, será llevado nuevamente a la pantalla de **Detalle del Producto**
+
+---
